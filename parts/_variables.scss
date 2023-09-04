@@ -1,0 +1,65 @@
+@charset "UTF-8";
+// 色指定
+$base:#E1E7EE;
+$main:#EFBB3F;
+$accent:#E94816;
+$black:#3D423E;
+$main50:rgba(239, 187, 63, 0.5);
+
+//レスポンシブ対応
+// ブレイクポイント
+$gray:998px;
+$pc:780px;
+$tab:768px;
+$tab600:600px;
+$sp:414px;
+
+@mixin gray {
+  @media screen and (max-width: ($gray)) {
+    @content;
+  }
+}
+@mixin pc {
+  @media screen and (max-width: ($pc)) {
+    @content;
+  }
+}
+
+@mixin tab {
+  @media screen and (max-width: ($tab)) {
+    @content;
+  }
+}
+
+@mixin tab600 {
+  @media screen and (max-width: ($tab600)) {
+    @content;
+  }
+}
+
+@mixin sp {
+  @media screen and (max-width: ($sp)) {
+    @content;
+  }
+}
+
+
+
+// 以下の記述を該当Sassファイルに書けばOKのようです。
+//  li{
+//      @include v.pc {
+//      //  ここに入るコードを@contentとしてミックスインに渡す
+//      }
+//  }
+
+/* コピペ用
+@include v.sp {
+
+}
+*/
+/*
+@include v.tab {
+
+}
+*/
+

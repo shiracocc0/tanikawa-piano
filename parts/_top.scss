@@ -1,0 +1,1133 @@
+@charset "utf-8";
+@use "variables" as v;
+
+
+.top-view {
+    width: 100%;
+    height: 90vh;
+    margin-bottom: 50px;
+
+    @include v.gray {
+        width: 100%;
+        height: auto;
+        margin: 0 auto;
+    }
+
+    @include v.tab {
+        width: 100%;
+        height: auto;
+        margin: 50px auto 0;
+    }
+
+    @include v.sp {
+        width: 95%;
+        height: auto;
+        margin: 35px auto 0;
+    }
+
+    &__box {
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        height: 90vh;
+
+        @include v.gray {
+            justify-content: start;
+            width: 100%;
+            height: auto;
+        }
+
+        @include v.tab {
+            justify-content: start;
+            width: 100%;
+            height: auto;
+            padding: 0 6vw;
+        }
+
+        @include v.sp {
+            justify-content: start;
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    &__minibox {
+        text-align: center;
+
+        @include v.gray {
+            width: 46%;
+            transform: scale(0.8);
+        }
+
+        @include v.tab {
+            order: 1;
+            width: 100%;
+            transform: none;
+        }
+
+        @include v.sp {
+            order: 1;
+            width: 100%;
+        }
+    }
+
+    &__img1 {
+        width: 95px;
+        height: 100%;
+
+        @include v.tab {
+            display: none;
+        }
+
+        @include v.sp {
+            display: none;
+        }
+    }
+
+    &__img2 {
+        width: 292px;
+        height: 81px;
+
+        @include v.tab {
+            width: 60%;
+            height: auto;
+            padding-top: 80px;
+        }
+
+        @include v.sp {
+            width: 95%;
+            height: auto;
+            padding-top: 40px;
+        }
+    }
+
+    &__img3 {
+        width: 292px;
+        height: 81px;
+
+        @include v.tab {
+            width: 60%;
+            height: auto;
+            padding-bottom: 40px;
+        }
+
+        @include v.sp {
+            width: 95%;
+            height: auto;
+            padding-bottom: 40px;
+        }
+    }
+
+    &__img5 {
+        width: 95px;
+        height: 100%;
+
+        @include v.gray {
+            width: 100px;
+            height: 100%;
+        }
+
+        @include v.tab {
+            display: none;
+        }
+
+        @include v.sp {
+            display: none;
+        }
+    }
+      
+      &__slides img {
+        width: auto;
+        height: 70vh;
+
+        @include v.gray {
+            width: 50vw;
+            height: auto;
+        }
+
+        @include v.tab {
+            width: 100%;
+            height: auto;
+        }
+
+        @include v.sp {
+            width: 100%;
+            height: auto;
+        }
+      }
+      
+      &__slideshow {
+        position: relative;
+
+        @include v.gray {
+            object-fit: contain;
+            transform: scale(0.85);
+        }
+      }
+
+      &__aniimg1 {
+        position: absolute;
+        width: 67px;
+        height: auto;
+        left: 10%;
+        animation: floating 2s ease-in-out infinite;
+
+        @keyframes floating {
+
+            0%,
+            100% {
+                transform: translateY(0);
+                /* 初期位置 */
+            }
+
+            50% {
+                transform: translateY(-20px);
+                /* 上に動く位置 */
+            }
+        }
+
+        @include v.gray {
+            width: 34px;
+        }
+
+        @include v.tab {
+            width: 67px;
+        }
+
+        @include v.sp {
+            width: 34px;
+        }
+      }
+      &__aniimg2 {
+        position: absolute;
+        width: 71px;
+        height: auto;
+        right: 20%;
+        top: 1%;
+        animation: swing linear 3s infinite;
+
+        @keyframes swing {
+            0% { transform: rotate(0deg); }
+            25% { transform: rotate(10deg); }
+            50% { transform: rotate(0deg); }
+            75% { transform: rotate(-10deg); }
+            100% { transform: rotate(0deg); }
+        }
+
+        @include v.gray {
+            width: 44px;
+        }
+
+        @include v.tab {
+            width: 71px;
+            top: 6%;
+        }
+
+        @include v.sp {
+            width: 44px;
+        }
+      }
+      &__aniimg3 {
+        position: absolute;
+        width: 74px;
+        height: auto;
+        right: 5%;
+        top: 17%;
+        animation: floating 3s ease-in-out infinite;
+        animation-delay: -1s;
+
+        @keyframes floating {
+            
+            0%,
+            100% {
+                transform: translateY(0);
+                /* 初期位置 */
+            }
+
+            50% {
+                transform: translateY(-20px);
+                /* 上に動く位置 */
+            }
+        }
+
+        @include v.gray {
+            width: 38px;
+        }
+
+        @include v.tab {
+            width: 74px;
+            top: 20%;
+        }
+
+        @include v.sp {
+            width: 38px;
+        }
+      }
+      &__aniimg4 {
+        position: absolute;
+        width: 125px;
+        height: auto;
+        right: -10%;
+        top: 50%;
+        animation: floating 2s ease-in-out infinite;
+        animation-delay: -1s;
+
+        @keyframes floating {
+
+            0%,
+            100% {
+                transform: translateY(0);
+                /* 初期位置 */
+            }
+
+            50% {
+                transform: translateY(-20px);
+                /* 上に動く位置 */
+            }
+        }
+
+        @include v.gray {
+            width: 51px;
+        }
+
+        @include v.tab {
+            width: 125px;
+        }
+
+        @include v.sp {
+            width: 51px;
+        }
+      }
+      &__aniimg5 {
+        position: absolute;
+        width: 140px;
+        height: auto;
+        right: -4%;
+        bottom: -7%;
+        animation: buruburu 0.5s infinite linear alternate;
+
+        @keyframes buruburu {
+            0% {
+              transform: translate(-3px, 0) rotate(-5deg);
+            }
+            50% {
+              transform: translate(0, -2px) rotate(0deg);
+            }
+            100% {
+              transform: translate(-3px, 0)　rotate(5deg);
+            }
+          }
+
+          @include v.gray {
+            width: 80px;
+            right: 5%;
+        }
+
+          @include v.tab {
+            width: 140px;
+            right: 8%;
+          }
+
+          @include v.sp {
+            width: 80px;
+            right: 5%;
+        }
+      }
+
+      &__aniimg6 {
+        position: absolute;
+        width: 90px;
+        height: auto;
+        right: -13%;
+        bottom: -6%;
+
+        @include v.gray {
+            width: 46px;
+            right: 0;
+        }
+
+        @include v.tab {
+            width: 90px;
+            right: 0;
+        }
+
+        @include v.sp {
+            width: 46px;
+            right: 0;
+        }
+      }
+
+      &__aniimg7 {
+        position: absolute;
+        width: 82px;
+        height: auto;
+        left: 20%;
+        bottom: -7%;
+        animation: pyonpyon 2s infinite ease;
+
+        @keyframes pyonpyon {
+            /*20%と30%のtranslateの値を変えることで跳ねる高さを変えられる*/
+            0% { transform: translate(0, 0); }
+            5% { transform: translate(0, 0); }
+            10% { transform: translate(0, 0); }
+            20% { transform: translate(0, -15px); }
+            25% { transform: translate(0, 0); }
+            30% { transform: translate(0, -15px); }
+            50% { transform: translate(0, 0); }
+            100% { transform: translate(0, 0); }
+        }
+
+        @include v.gray {
+            width: 50px;
+        }
+
+        @include v.tab {
+            width: 82px;
+        }
+
+        @include v.sp {
+            width: 50px;
+        }
+      }
+      &__aniimg8 {
+        position: absolute;
+        width: 90px;
+        height: auto;
+        left: -5%;
+        bottom: -5%;
+
+        @include v.gray {
+            width: 46px;
+        }
+
+        @include v.tab {
+            width: 90px;
+        }
+
+        @include v.sp {
+            width: 46px;
+        }
+      }
+      &__aniimg9 {
+        position: absolute;
+        width: 90px;
+        height: auto;
+        left: 6%;
+        bottom: -8.5%;
+
+        @include v.gray {
+            width: 46px;
+        }
+
+        @include v.tab {
+            width: 90px;
+        }
+
+        @include v.sp {
+            width: 46px;
+        }
+      }
+
+      &__banner {
+        width: auto;
+        justify-content: space-around;
+        align-items: center;
+        border-radius: 20px;
+        background-color: v.$main;
+        // margin-top: 60px;
+        padding: 20px 0;
+        display: flex;
+
+
+        @include v.tab {
+            // width: 100%;
+            // margin: 0;
+            padding: 20px;
+        }
+
+        @include v.sp {
+            flex-direction: column;
+            margin-top: 20px;
+            margin-bottom: 70px;
+            padding: 20px;
+            gap: 10px;
+        }
+
+        picture {
+
+            @include v.tab {
+                width: 25%;
+                height: auto;
+            }
+
+            @include v.tab600 {
+                width: 20%;
+                height: auto;
+            }
+
+            @include v.sp {
+                width: 80%;
+                height: auto;
+            }
+        }
+      }
+
+      &__banner img:nth-child(even) {
+        // width: 50%;
+        // height: auto;
+
+        @include v.tab {
+            width: 100%;
+        }
+
+        @include v.tab600 {
+            width: 200px;
+        }
+
+        @include v.sp {
+            width: 100%;
+            // margin: 10px 0;
+        }
+      }
+}
+
+.banner-zone {
+    display: block;
+    width: auto;
+    max-width: 1000px;
+    margin: 0 auto;
+
+    @include v.tab {
+        margin: 0 6vw;
+        max-width: 100%;
+    }
+}
+
+.top__copy {
+    color: v.$black;
+    font-size: 26px;
+    padding: 40px 0;
+}
+
+.top__policy {
+
+    &__box {
+        padding-top: 80px;
+        margin-bottom: 50px;
+        justify-content: space-between;
+
+        @include v.gray {
+            padding-bottom: 350px;
+            position: relative;
+        }
+
+        @include v.tab {
+            padding: 0;
+        }
+
+        @include v.sp {
+            padding: 0;
+        }
+    }
+
+    // &__graybox {
+    //     position: relative;
+    // }
+
+    &__teacher {
+        @include v.gray {
+            position: absolute;
+            // right: -100%;
+            // left: -100%;
+            left: 51%;
+            bottom: -2%;
+        }
+
+        @include v.tab {
+            position: initial;
+        }
+    }
+
+    &__minibox {
+        padding-bottom: 20px;
+        text-align: center;
+        align-items: center;
+        display: flex;
+        justify-content: space-between;
+
+        @include v.tab {
+            padding: 20px 0;
+        }
+
+        @include v.sp {
+            padding: 0 0 20px 0;
+            justify-content: space-around;
+        }
+    }
+
+    &__list {
+        font-size: 26px;
+        line-height: 1.7em;
+
+        @include v.gray {
+            font-size: 22px;
+        }
+
+        @include v.sp {
+            font-size: 20px;
+        }
+    }
+
+    &__text p {
+        padding-bottom: 20px;
+        line-height: 36px;
+    }
+
+    section {
+        width: 45%;
+
+        @include v.tab {
+            width: 100%;
+        }
+
+        @include v.sp {
+            width: 100%;
+            margin-top: 50px;
+        }
+    }
+
+    section div {
+        width: 100%;
+    }
+
+    &__kuma {
+        width: 64px;
+        height: auto;
+    }
+
+    &__hukurou {
+        width: 70px;
+        height: auto;
+
+        @include v.sp {
+            display: none;
+        }
+    }
+
+    &__aside {
+        width: 45%;
+        position: relative;
+
+        @include v.tab {
+            display: none;
+        }
+
+        @include v.sp {
+            display: none;
+        }
+    }
+
+    &__pic1 {
+        width: 153px;
+        height: auto;
+        position: absolute;
+        // transform: scaleX(-1);
+        top: 25%;
+        animation: swing2 linear 2.5s infinite;
+
+        @keyframes swing2 {
+            0% { transform: scaleX(-1) rotate(0deg); }
+            25% { transform: scaleX(-1) rotate(10deg); }
+            50% { transform: scaleX(-1) rotate(0deg); }
+            75% { transform: scaleX(-1) rotate(-10deg); }
+            100% { transform: scaleX(-1) rotate(0deg); }
+        }
+
+        @include v.gray {
+            width: 125px;
+            top: 32%;
+        }
+    }
+
+    &__pic2 {
+        width: 90px;
+        height: auto;
+        position: absolute;
+        right: 5%;
+        bottom: 35%;
+        animation: pyonpyon2 2s infinite ease;
+
+        @keyframes pyonpyon2 {
+            /*20%と30%のtranslateの値を変えることで跳ねる高さを変えられる*/
+            0% { transform: scaleX(-1) translate(0, 0); }
+            5% { transform: scaleX(-1) translate(0, 0); }
+            10% { transform: scaleX(-1) translate(0, 0); }
+            20% { transform: scaleX(-1) translate(0, -15px); }
+            25% { transform: scaleX(-1) translate(0, 0); }
+            30% { transform: scaleX(-1) translate(0, -15px); }
+            50% { transform: scaleX(-1) translate(0, 0); }
+            100% { transform: scaleX(-1) translate(0, 0); }
+        }
+
+        @include v.gray {
+            width: 70px;
+            right: 5%;
+            bottom: 25%;
+        }
+    }
+
+    &__pic3 {
+        width: 450px;
+        height: auto;
+
+    }
+
+
+    &__teacher img {
+        width: 128px;
+        height: auto;
+        border-bottom: 1px dashed v.$black;
+        padding-bottom: 15px;
+        margin-bottom: 15px;
+    }
+
+    &__teacher div {
+        text-align: center;
+    }
+
+    &__teacher {
+        background-color: v.$main50;
+        border-radius: 30px;
+        margin-top: 20px;
+        padding: 35px;
+        line-height: 36px;
+    }
+}
+
+.top__policy__rental {
+    background-color: v.$main50;
+    border-radius: 30px;
+    margin-top: 30px;
+    padding: 35px;
+    line-height: 36px;
+
+    @include v.gray {
+        position: absolute;
+        right: 51%;
+        bottom: -2%;
+    }
+
+    @include v.tab {
+        position: initial;
+    }
+
+    div {
+        text-align: center;
+    }
+
+    img {
+        width: 128px;
+        height: auto;
+        border-bottom: 1px dashed v.$black;
+        padding-bottom: 15px;
+        margin-bottom: 15px;
+    }
+
+}
+
+.top__button {
+    text-align: center;
+    background-color: v.$accent;
+    border-radius: 86px;
+    color: #fff;
+    width: 240px;
+    margin: 0 auto;
+
+    :hover {
+        background-color: v.$main;
+        opacity: 1;
+    }
+}
+
+.button {
+    display: inline-block;
+    border-radius: 86px;
+    color: #fff;
+    width: 240px;
+    height: auto;
+    padding: 20px;
+}
+
+.top__line {
+    text-align: center;
+    margin: 50px;
+}
+
+.top__lesson {
+    text-align: center;
+
+    @include v.tab {
+        padding: 0 6vw;
+    }
+
+    &__br {
+        display: none;
+
+        @include v.sp {
+            display: block;
+        }
+    }
+
+    h2 {
+        font-size: 48px;
+        color: #fff;
+        padding-top: 50px;
+    }
+
+    p {
+        color: #fff;
+        // padding-bottom: 30px;
+    }
+
+    h2 + p {
+        margin-bottom: 30px;
+    }
+
+    figure {
+        background-color: v.$base;
+        border-radius: 30px;
+        padding: 35px;
+        margin-top: 30px;
+    }
+
+    figure img {
+        width: 129px;
+        height: 109px;
+        border-bottom: 1px dashed v.$black;
+        padding-bottom: 15px;
+        margin-bottom: 15px;
+    }
+
+    figcaption {
+        text-align: left;
+        line-height: 36px;
+    }
+
+    &__box {
+        background-color: #fff;
+        border-radius: 10px;
+        padding: 50px 50px;
+
+        @include v.tab {
+            padding: 50px 6vw;
+        }
+
+        @include v.sp {
+            padding: 50px 15px;
+        }
+    }
+
+    &__minibox {
+        justify-content: space-between;
+        margin-bottom: 50px;
+        // position: relative;
+
+        @include v.gray {
+            flex-direction: column;
+        }
+    }
+
+    &__anibox {
+        position: relative;
+        width: 50%;
+
+        @include v.gray {
+            width: 100%;
+        }
+
+        @include v.tab {
+            width: 100%;
+        }
+
+        @include v.sp {
+            width: 100%;
+        }
+    }
+
+    &__img {
+        width: 100%;
+        object-fit: cover;
+        border-radius: 20px;
+        height: 100%;
+    }
+
+    &__textbox {
+        width: 45%;
+
+        @include v.gray {
+            width: 100%;
+            margin-top: 50px;
+        }
+
+        @include v.tab {
+            width: 100%;
+            margin-top: 50px;
+        }
+
+        @include v.sp {
+            width: 100%;
+            margin-top: 50px;
+        }
+    }
+
+    &__textbox p {
+        text-align: left;
+        color: v.$black;
+        line-height: 36px;
+    }
+
+    &__textbox p:first-child {
+        color: v.$main;
+        padding-bottom: 30px;
+        font-weight: bold;
+        font-size: 20px;
+
+        @include v.gray {
+            text-align: center;
+        }
+        
+    }
+
+    &__pic1 {
+        width: 100px;
+        position: absolute;
+        animation: pyonpyon3 2s infinite ease;
+
+        @keyframes pyonpyon3 {
+            /*20%と30%のtranslateの値を変えることで跳ねる高さを変えられる*/
+            0% { transform: translate(0, 0); }
+            5% { transform: translate(0, 0); }
+            10% { transform: translate(0, 0); }
+            20% { transform: translate(0, -15px); }
+            25% { transform: translate(0, 0); }
+            30% { transform: translate(0, -15px); }
+            50% { transform: translate(0, 0); }
+            100% { transform: translate(0, 0); }
+        }
+
+        @include v.tab {
+            width: 80px;
+        //     left: 85%;
+        //     bottom: -5%;
+        }
+
+        @include v.sp {
+            width: 55px;
+            // left: 70%;
+            // bottom: -10%;
+        }
+    }
+
+    &__pic2 {
+        width: 150px;
+        position: absolute;
+        right: 70%;
+        bottom: 5%;
+        animation: swing3 linear 2.5s infinite;
+
+        @keyframes swing3 {
+            0% { transform: scaleX(-1) rotate(0deg); }
+            25% { transform: scaleX(-1) rotate(10deg); }
+            50% { transform: scaleX(-1) rotate(0deg); }
+            75% { transform: scaleX(-1) rotate(-10deg); }
+            100% { transform: scaleX(-1) rotate(0deg); }
+        }
+
+        @include v.tab {
+            width: 106px;
+            right: 80%;
+        bottom: 0;
+        }
+
+        @include v.sp {
+            width: 80px;
+            right: 70%;
+            bottom: -10%;
+        }
+    }
+}
+
+/* 2つ目の flex コンテナ内の要素に対して flex-direction を設定 */
+.s-lesson .top__lesson__minibox {
+    flex-direction: row-reverse;
+
+    @include v.gray {
+        flex-direction: column;
+    }
+
+    @include v.tab {
+        flex-direction: column;
+    }
+
+    @include v.sp {
+        flex-direction: column;
+    }
+}
+
+.j-lesson {
+    background-color: v.$main;
+    padding-bottom: 50px;
+
+    @include v.tab {
+        padding: 0 6vw 50px;
+    }
+
+    @include v.sp {
+        padding: 0 6vw 50px;
+    }
+
+    &__title {
+        padding: 15px 0;
+        margin-bottom: 50px;
+        font-size: 36px;
+        color: v.$main;
+        border-top: 3px dashed v.$main;
+        border-bottom: 3px dashed v.$main;
+    }
+
+    .top__lesson__img {
+        // object-position: -300px 0;
+
+        @include v.gray {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            object-position: 0;
+        }
+
+        @include v.tab {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            object-position: 0;
+        }
+
+        @include v.sp {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            // object-position: -40px 0;
+        }
+    }
+}
+
+.s-lesson {
+    background-color: v.$accent;
+    padding: 50px 0;
+    margin-bottom: 60px;
+
+    @include v.tab {
+        padding: 50px 6vw;
+    }
+
+    &__title {
+        padding: 15px 0;
+        margin-bottom: 50px;
+        font-size: 36px;
+        color: v.$accent;
+        border-top: 3px dashed v.$accent;
+        border-bottom: 3px dashed v.$accent;
+    }
+
+    .top__lesson__img {
+        object-position: -80px 0;
+
+        @include v.gray {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            object-position: 0;
+        }
+
+        @include v.tab {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            object-position: 0;
+        }
+
+        @include v.sp {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            object-position: 0;
+        }
+    }
+}
+
+.s-lesson .top__lesson__textbox p:first-child {
+    color: v.$accent;
+}
+
+
+  /* 背景画像の見えている高さ */
+//   .parallax {
+//     height: 300px;
+//     background-image: url(../images/index-prr.jpg);
+//     background-attachment: fixed;
+//     background-position: center center;
+
+//     @include v.tab {
+//         height: 200px;
+//         background-size: cover;
+//     }
+
+//     @include v.sp {
+//         height: 200px;
+//         background-image: url(../images/index-prr-sp.JPG);
+//         background-size: cover;
+//     }
+//   }
+
+  .parallax {
+    &__container{
+        position: relative;
+        height: 300px;
+
+        @include v.tab {
+            height: 200px;
+        }
+     }
+
+     &__inner{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        clip-path: inset(0);
+     }
+
+     &__bg{
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background-image: url('../images/index-prr.jpg');
+        background-size: cover;
+        background-position: center;
+        z-index: -1;
+
+        @include v.tab {
+            background-image: url('../images/index-prr-sp.JPG');
+        }
+
+        @include v.tab {
+            top: 10%;
+            width: 100vw;
+            height: 80vh;
+            background-image: url('../images/index-prr-sp.JPG');
+        }
+     }
+  }

@@ -1,0 +1,636 @@
+@charset 'utf-8';
+@use "variables"as v;
+
+.contact-view {
+    height: 90vh;
+    text-align: center;
+
+
+    @include v.tab {
+        height: 90vh;
+        justify-content: center;
+        display: flex;
+    }
+
+    // @include v.sp {
+    //     height: 100vh;
+    //     justify-content: center;
+    // }
+
+    &__box {
+        justify-content: center;
+        align-items: center;
+        gap: 0 100px;
+        margin: 0 auto;
+
+        @include v.gray {
+            gap: 0;
+        }
+
+        @include v.tab {
+            gap: 40px;
+        }
+
+        @include v.sp {
+            gap: 40px;
+        }
+    }
+
+    img {
+        width: 50%;
+        height: auto;
+
+
+        @include v.tab {
+            width: 60%;
+        }
+
+        @include v.sp {
+            width: 90%;
+        }
+    }
+}
+
+.form-container {
+    background-color: v.$base;
+    padding: 50px 6vw;
+
+    &__box {
+        background-color: #fff;
+        padding: 50px;
+        border-radius: 20px;
+
+        @include v.gray {
+            margin: 0;
+        }
+
+        @include v.tab {
+            padding: 20px 6vw 50px;
+        }
+
+        @include v.sp {
+            padding: 20px 6vw 50px;
+        }
+    }
+
+    &__box h3 {
+        text-align: center;
+        font-size: 26px;
+        font-weight: bold;
+        line-height: 1.7em;
+        border-bottom: solid 3px v.$main;
+    }
+
+    &__box p {
+        margin: 50px 0 30px 0;
+    }
+
+    &__item {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 20px;
+
+        @include v.tab600 {
+            flex-direction: column;
+            align-items: normal;
+        }
+    }
+
+    &__item:last-child {
+        justify-content: right;
+    }
+
+    &__minibox {
+        justify-content: space-around;
+        margin-top: 50px;
+        display: flex;
+
+        @include v.tab600 {
+            flex-direction: column;
+        }
+    }
+}
+
+form {
+    width: 100%;
+}
+
+label {
+    @include v.tab600 {
+        text-align: left;
+        margin-bottom: 10px;
+    }
+
+}
+
+input {
+    width: 70%;
+    height: 50px;
+    border: solid 1px v.$main;
+    border-radius: 10px;
+    padding: 0 1em;
+
+    @include v.tab600 {
+        width: 100%;
+        border-radius: 20px;
+    }
+}
+
+textarea {
+    width: 70%;
+    height: 180px;
+    border: solid 1px v.$main;
+    border-radius: 10px;
+    padding: 1em;
+
+    @include v.tab600 {
+        width: 100%;
+        border-radius: 20px;
+    }
+}
+
+.form-button {
+    border-radius: 86px;
+    background-color: v.$main;
+}
+
+.privacy {
+    width: 31%;
+
+    @include v.tab600 {
+        width: 100%;
+    }
+
+    h3 {
+        border: none;
+        margin-bottom: 10px;
+        font-size: 20px;
+        text-align: left;
+    }
+}
+
+ol {
+    padding-left: 1.5em;
+    line-height: 32px;
+}
+
+.publisher {
+    width: 319px;
+    height: auto;
+    background-color: v.$base;
+    padding: 35px;
+    border-radius: 20px;
+    text-align: left;
+
+    @include v.tab {
+        width: 50%;
+        margin-top: 22px;
+    }
+
+    @include v.tab600 {
+        width: 100%;
+        margin-top: 22px;
+    }
+
+    h3 {
+        text-align: left;
+        border: none;
+        margin-bottom: 20px;
+        font-size: 20px;
+    }
+
+    rt {
+        font-size: 14px;
+        font-weight: medium;
+    }
+
+    p {
+        margin: 10px 0;
+    }
+
+    &__mobile-box {
+        display: flex;
+        align-items: last baseline;
+
+        img {
+            width: 16px;
+            height: 16px;
+            margin-right: 5px;
+            transform: translateY(3px);
+        }
+
+        a {
+            color: v.$accent;
+            font-size: 16px;
+            font-weight: bold;
+        }
+    }
+
+    &__tel-box {
+        display: flex;
+        align-items: last baseline;
+
+
+        img {
+            width: 16px;
+            height: 16px;
+            margin-right: 5px;
+            transform: translateY(1px);
+        }
+
+        a {
+            color: v.$accent;
+            font-size: 16px;
+            font-weight: bold;
+        }
+    }
+}
+
+.publisher-tel {
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.publisher-text {
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.publisher-text:first-of-type {
+    font-size: 16px;
+}
+
+.publisher-button {
+    text-align: center;
+    background-color: v.$black;
+    border-radius: 86px;
+    color: #fff;
+    width: 100%;
+    margin-top: 20px;
+
+    .button {
+        display: inline-block;
+        border-radius: 86px;
+        color: #fff;
+        width: 100%;
+        height: auto;
+        padding: 15px;
+    }
+}
+
+
+.abouttrial {
+    padding: 80px 0;
+
+    &__box {
+        justify-content: space-around;
+
+        @include v.sp {
+            width: 100%;
+        }
+    }
+}
+
+
+.trialflow {
+    width: 40%;
+
+    @include v.tab {
+        width: 100%;
+    }
+
+    @include v.sp {
+        width: 100%;
+    }
+
+    &__title {
+        color: v.$black;
+        font-size: 20px;
+        font-weight: bold;
+        text-align: center;
+        line-height: 1.8;
+        // margin: 80px 0 50px;
+        // margin-bottom: 50px;
+    }
+
+    &__title__box {
+        display: flex;
+        justify-content: center;
+    }
+
+
+    &__title__box::before {
+        content: url(../images/nami-left-black.png);
+        padding-right: 80px;
+        vertical-align: middle;
+
+        @include v.gray {
+            padding-right: 25px;
+        }
+
+        @include v.tab600 {
+            padding-right: 25px;
+        }
+    }
+
+    &__title__box::after {
+        content: url(../images/nami-right-black.png);
+        padding-left: 80px;
+        vertical-align: middle;
+
+        @include v.gray {
+            padding-left: 25px;
+        }
+
+        @include v.tab600 {
+            padding-left: 25px;
+        }
+    }
+
+    &__container {
+        width: 80%;
+        margin: 30px auto 0;
+        padding-left: 0;
+        list-style-type: none;
+        font-size: 20px;
+
+        @include v.tab {
+            width: 50%;
+        }
+
+        @include v.tab600 {
+            width: 70%;
+        }
+
+        @include v.sp {
+            width: 100%;
+        }
+    }
+
+    &__container li {
+        margin-bottom: 40px;
+        vertical-align: middle;
+        color: v.$accent;
+        font-size: 20px;
+        font-weight: bold;
+        padding-left: 40px;
+        text-indent: -40px;
+    }
+
+    &__container li:first-child::before {
+        content: url(../images/1.svg);
+        padding-right: 15px;
+        margin-bottom: 20px;
+        width: 40px;
+        text-indent: 0;
+
+        @include v.sp {
+            // transform: translateY(100px);
+            // padding-top: 50px;
+        }
+    }
+
+    &__container li:nth-child(even)::before {
+        content: url(../images/2.svg);
+        padding-right: 11px;
+        margin-bottom: 20px;
+        width: 40px;
+        text-indent: 0;
+
+    }
+
+    &__container li:last-child::before {
+        content: url(../images/3.svg);
+        padding-right: 12px;
+        margin-bottom: 20px;
+        width: 40px;
+        text-indent: 0;
+    }
+
+    &__br {
+        display: none;
+
+        @include v.sp {
+            display: block;
+        }
+    }
+}
+
+.trialdetail {
+    width: 42%;
+
+    @include v.tab {
+        width: 100%;
+    }
+
+    @include v.sp {
+        width: 100%;
+    }
+
+    &__title {
+        color: v.$black;
+        font-size: 20px;
+        font-weight: bold;
+        text-align: center;
+        line-height: 1.8;
+        // margin: 80px 0 50px;
+        // margin-bottom: 50px;
+    }
+
+    &__title__box {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+
+    &__title__box::before {
+        content: url(../images/nami-left-black.png);
+        padding-right: 80px;
+        vertical-align: middle;
+
+        @include v.gray {
+            padding-right: 25px;
+        }
+
+        @include v.tab600 {
+            padding-right: 25px;
+        }
+    }
+
+    &__title__box::after {
+        content: url(../images/nami-right-black.png);
+        padding-left: 80px;
+        vertical-align: middle;
+
+        @include v.gray {
+            padding-left: 25px;
+        }
+
+        @include v.tab600 {
+            padding-left: 25px;
+        }
+    }
+
+    &__container {
+        width: 78%;
+        margin: 0 auto;
+        line-height: 32px;
+
+        @include v.tab {
+            width: 60%;
+        }
+
+        @include v.tab600 {
+            width: 80%;
+        }
+
+        @include v.sp {
+            width: 100%;
+        }
+    }
+
+    h4 {
+        font-size: 20px;
+    }
+
+    &__minibox:first-child {
+        margin-top: 30px;
+        padding: 22px 0;
+        border-top: 2px dashed v.$accent;
+        border-bottom: 2px dashed v.$accent;
+    }
+
+    &__minibox:nth-child(even) {
+        padding: 22px 0;
+        border-bottom: 2px dashed v.$accent;
+    }
+
+    &__minibox:last-child {
+        padding: 22px 0;
+        border-bottom: 2px dashed v.$accent;
+    }
+}
+
+.yoyaku-button {
+    text-align: center;
+    background-color: v.$accent;
+    border-radius: 86px;
+    color: #fff;
+    width: 240px;
+    margin: 50px auto 0;
+
+    @include v.sp {
+        margin: 80px auto 0;
+    }
+}
+
+.thanks-container {
+    background-color: v.$base;
+    padding: 50px 6vw;
+
+    &__box {
+        background-color: #fff;
+        padding: 50px;
+        border-radius: 20px;
+
+        @include v.tab {
+            padding: 20px 6vw 50px;
+        }
+
+        @include v.sp {
+            padding: 20px 6vw 50px;
+        }
+
+
+
+        .spbr {
+            @include v.sp {
+                display: inline;
+            }
+        }
+
+
+    }
+
+    &__title {
+        font-size: 40px;
+        text-align: center;
+
+        @include v.gray {
+            font-size: 40px;
+        }
+
+        @include v.tab {
+            font-size: 35px;
+        }
+
+        @include v.sp {
+            font-size: 28px;
+        }
+    }
+
+}
+
+.thanksmes {
+    text-align: center;
+
+    &__p {
+        font-size: 20px;
+        text-align: center;
+
+        @media screen and (max-width: (827px)) {
+            font-size: 18px;
+        }
+    }
+
+    @media screen and (max-width: (827px)) {
+        text-align: center;
+    }
+    @media screen and (max-width: (556px)) {
+        text-align: left;
+    }
+
+    .pcnone {
+        display: none;
+
+        @include v.gray {
+            display: inline;
+        }
+
+        @media screen and (max-width: (556px)) {
+            display: none;
+        }
+    }
+}
+
+.accept {
+    margin: 20px auto;
+    width: 30vw;
+    height: auto;
+
+    @include v.gray {
+        width: 50vw;
+    }
+
+    @include v.sp {
+        width: 70vw;
+        margin: 30px auto;
+    }
+}
+
+.talking {
+    margin: 0 auto;
+
+    &__p {
+        font-size: 16px;
+        margin-bottom: 40px;
+        text-align: center;
+    }
+}
+
+.wavy {
+    text-decoration: underline wavy v.$accent;
+}

@@ -1,0 +1,140 @@
+@use "variables"as v;
+
+// お守りたちです。
+body {
+    font-family: 'Zen Kaku Gothic New', sans-serif;
+    line-height: 1.35;
+    letter-spacing: 0.07em;
+    color: v.$black;
+}
+
+::-webkit-scrollbar{
+    width: 10px;
+ }
+ ::-webkit-scrollbar-track{
+    background-color: v.$base;
+
+ }
+ ::-webkit-scrollbar-thumb{
+    background-color: v.$accent;
+    border-radius: 5px;
+ }
+ 
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    opacity: 0.7;
+    cursor: url(../images/cursor4.cur), pointer;
+}
+
+img {
+    max-width: 100%;
+    vertical-align: bottom;
+}
+
+figure {
+    margin: 0;
+}
+
+.flex {
+    display: flex;
+
+    @include v.tab {
+        flex-direction: column;
+    }
+
+    @include v.sp {
+        flex-direction: column;
+    }
+}
+
+.pc-flex {
+    display: flex;
+}
+
+.sp-flex {
+    display: flex;
+}
+
+.wrapper {
+    max-width: 1000px;
+    margin: 0 auto;
+
+    @include v.gray {
+        max-width: 1100px;
+        margin: 0 30px;
+    }
+
+    @include v.tab {
+        padding: 0 6vw;
+        max-width: 100%;
+    }
+
+    @include v.sp {
+        padding: 0 6vw;
+        max-width: 100%;
+        margin: 0;
+    }
+}
+
+h1 {
+    font-family: 'Zen Kaku Gothic New', sans-serif;
+
+    @include v.tab {
+        font-size: 26px;
+    }
+
+
+
+
+}
+
+h2 {
+    font-size: 64px;
+    font-weight: bold;
+    color: v.$accent;
+    font-family: 'Zen Kaku Gothic New', sans-serif;
+
+    @include v.gray {
+        font-size: 48px;
+    }
+
+    @include v.tab {
+        font-size: 36px;
+    }
+
+    @include v.sp {
+        font-size: 36px;
+    }
+}
+
+h3 {
+    font-family: 'Zen Kaku Gothic New', sans-serif;
+}
+
+h4 {
+    font-family: 'Zen Kaku Gothic New', sans-serif;
+}
+
+p {
+    font-size: 16px;
+    letter-spacing: 5%;
+    line-height: 2;
+}
+
+/*下線*/
+.underline01 {
+    background: linear-gradient(transparent 40%, #efbb3f 60%);
+}
+
+.underline02 {
+    background: linear-gradient(transparent 40%, #fff 60%);
+}
+

@@ -1,0 +1,796 @@
+@charset "utf-8";
+@use "variables"as v;
+
+/*ここから　about css*/
+/*共通設定*/
+
+.about-title {
+    color: v.$accent;
+    font-size: 36px;
+    text-align: center;
+
+    & br {
+        display: none;
+
+        @include v.sp {
+            display: block;
+        }
+    }
+}
+
+.about-title-box {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+    align-items: center;
+}
+
+
+.about-title-box::before {
+    content: url(../images/nami-left.png);
+    padding-right: 30px;
+}
+
+.about-title-box::after {
+    content: url(../images/nami-right.png);
+    padding-left: 30px;
+}
+
+/*一番大きいarticleの余白*/
+.info,
+.profile,
+.access {
+    padding: 80px 0;
+
+    @include v.sp {
+        padding: 50px 0 30px;
+    }
+
+}
+
+.gallery {
+    padding: 135px 0;
+}
+
+/*main-view*/
+.about-view {
+    height: 90vh;
+    text-align: center;
+    background-color: v.$main;
+
+    @include v.tab {
+        height: 90vh;
+        justify-content: center;
+    }
+
+    // @include v.sp {
+    //     height: 90vh;
+    //     justify-content: center;
+    // }
+
+
+
+    &__box {
+        justify-content: center;
+        align-items: center;
+        gap: 0 100px;
+        margin: 0 auto;
+
+        @include v.gray {
+            gap: 0 50px;
+        }
+
+        @include v.tab {
+            gap: 40px;
+        }
+
+        @include v.sp {
+            gap: 40px;
+        }
+    }
+
+    img {
+        width: 50%;
+        height: auto;
+
+        @include v.tab {
+            width: 60%;
+        }
+
+        @include v.sp {
+            width: 90%;
+        }
+    }
+}
+
+
+.about-h2 {
+    color: #fff;
+    margin: auto 0;
+
+
+    @include v.sp {
+        text-align: center;
+        margin-bottom: 40px;
+        padding-right: 0;
+    }
+
+}
+
+
+/*info*/
+.info {
+    &__container {
+        margin-bottom: 50px;
+        align-items: center;
+
+        @include v.gray {
+            gap: 50px;
+            justify-content: center;
+        }
+    }
+
+    &__catch-copy {
+        font-size: 26px;
+        font-weight: bold;
+        text-align: center;
+        margin-bottom: 20px;
+
+        @include v.tab {
+            font-size: 20px;
+            margin: 20px 0;
+        }
+
+        @include v.sp {
+            font-size: 20px;
+            margin: 20px 0;
+        }
+    }
+
+    &__img {
+        max-height: 470px;
+
+        @include v.gray {
+            width: 40%;
+            height: auto;
+        }
+
+        @include v.sp {
+            order: 1;
+            width: 100%;
+        }
+    }
+
+    &__box {
+        width: 50%;
+        margin-left: 60px;
+
+        @include v.gray {
+            width: 60%;
+            margin-left: 0;
+        }
+
+        @include v.tab {
+            width: 100%;
+            margin-left: 0;
+        }
+
+        @include v.sp {
+            width: 100%;
+            margin-left: 0;
+        }
+    }
+
+    &__text {
+
+        @include v.sp {
+            margin-bottom: 40px;
+        }
+    }
+}
+
+.line-img {
+    margin: 40px;
+
+    @include v.tab {
+        text-align: center;
+    }
+
+
+}
+
+.info2 {
+    font-size: 26px;
+
+    @include v.tab {
+        width: 100%;
+        // text-align: center;
+        margin: 0 auto;
+    }
+
+    @include v.sp {
+        width: 100%;
+        // text-align: center;
+        margin: 0 auto;
+    }
+
+    &__container {
+        justify-content: space-around;
+        margin: 30px 0;
+
+        @include v.tab {
+            min-width: none;
+            width: 230px;
+            align-items: start;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        @include v.sp {
+            min-width: none;
+            width: 230px;
+            align-items: start;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+    }
+
+    &__box {
+        color: v.$accent;
+        font-weight: bold;
+        margin-bottom: 30px;
+
+        p {
+            font-size: 20px;
+            display: flex;
+            /*これで数字の中心にくる*/
+        }
+
+        img {
+            height: 150px;
+            max-width: 318px;
+        }
+    }
+
+    &__text {
+        text-align: center;
+
+        @include v.tab {
+            width: 70vw;
+            text-align: left;
+            margin: 0 auto;
+        }
+
+
+        @include v.sp {
+            text-align: left;
+            width: 100%;
+        }
+    }
+
+    &__1::before {
+        content: url(../images/1.svg);
+        padding-right: 30px;
+        vertical-align: middle;
+    }
+
+    &__2::before {
+        content: url(../images/2.svg);
+        padding-right: 30px;
+        vertical-align: middle;
+    }
+
+    &__3::before {
+        content: url(../images/3.svg);
+        padding-right: 30px;
+        vertical-align: middle;
+    }
+}
+
+.info2-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    @include v.tab {
+        display: block;
+        margin-bottom: 40px;
+    }
+
+    @include v.sp {
+        display: block;
+        margin-bottom: 40px;
+    }
+
+}
+
+.info2-box::before {
+    content: url(../images/cyon-left.png);
+    padding-right: 30px;
+
+    @include v.tab {
+        content: url(../images/cyon-sp-top.png);
+        padding-right: 0;
+        display: block;
+        margin-bottom: 15px;
+        text-align: center;
+    }
+
+    @include v.sp {
+        content: url(../images/cyon-sp-top.png);
+        padding-right: 0;
+        display: block;
+        margin-bottom: 15px;
+        text-align: center;
+    }
+
+}
+
+.info2-box::after {
+    content: url(../images/cyon-right.png);
+    padding-left: 30px;
+
+    @include v.tab {
+        content: url(../images/cyon-sp-bottom.png);
+        padding-left: 0;
+        display: block;
+        margin-top: 15px;
+        text-align: center;
+    }
+
+
+    @include v.sp {
+        content: url(../images/cyon-sp-bottom.png);
+        padding-left: 0;
+        display: block;
+        margin-top: 15px;
+        text-align: center;
+    }
+
+}
+
+
+
+/*profile*/
+.profile {
+    background-color: v.$main50;
+}
+
+.profile-img {
+    text-align: center;
+}
+
+.profile-face {
+    padding: 20px 70px;
+    background-color: #fff;
+    border-radius: 20px;
+    width: 385px;
+    height: auto;
+
+    @include v.sp {
+        padding: 20px;
+    }
+
+
+}
+
+.prof {
+    &__container {
+        justify-content: space-around;
+        padding: 60px 0 50px;
+
+        @include v.sp {
+            padding-bottom: 30px;
+        }
+
+    }
+
+    &__box1 {
+        width: 45%;
+
+        @include v.tab {
+            width: 100%;
+            padding: 0px;
+            margin-bottom: 40px;
+        }
+
+        @include v.sp {
+            width: 100%;
+            padding: 0px;
+            margin-bottom: 40px;
+        }
+
+        h4 {
+            text-align: center;
+            font-size: 26px;
+            font-weight: bold;
+            border-bottom: 3px solid #fff;
+            padding-bottom: 15px;
+            margin-bottom: 40px;
+        }
+    }
+
+    &__text {
+        margin-bottom: 10px;
+    }
+
+    &__text:last-child {
+        margin-bottom: 0;
+        text-align: right;
+    }
+
+
+
+    &__history {
+        // width: 475px;
+        width: 45%;
+        // background-color: #fff;
+        padding: 20px;
+        border-radius: 20px;
+        border: 3px solid #fff;
+
+        @include v.tab {
+            width: 100%;
+        }
+
+        @include v.sp {
+            width: 100%;
+        }
+
+
+        ul {
+            list-style-type: disc;
+            border-bottom: 3px dashed #fff;
+            padding-bottom: 20px;
+            margin-bottom: 20px;
+            padding-left: 20px;
+
+            li {
+                line-height: 2;
+            }
+        }
+
+        h4 {
+            text-align: center;
+            font-size: 20px;
+            font-weight: bold;
+            border-bottom: 3px dashed #fff;
+            padding-bottom: 20px;
+            margin-bottom: 20px;
+
+        }
+    }
+
+}
+
+.more-history p {
+    border-bottom: 2px dashed #fff;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+    line-height: 2;
+}
+
+/*ブログへボタン*/
+.blog-btn {
+    text-align: center;
+    background-color: v.$accent;
+    border-radius: 86px;
+    width: 240px;
+    margin: 0 auto;
+}
+
+
+
+
+/*garally*/
+.gallery {
+    padding-right: 100px;
+
+    &__container {
+        height: 35vh;
+        max-width: 1000px;
+        background-color: rgba(253, 207, 0, 0.8);
+        background-image: url(../images/piano.png);
+        background-size: 50%;
+        background-repeat: repeat-x;
+        border-radius: 0 20px 20px 0;
+        position: relative;
+
+        @include v.sp {
+            height: 700px;
+            max-width: 270px;
+            background-image: url(../images/piano-sp.png);
+            background-repeat: repeat-y;
+        }
+    }
+
+    // &__box {
+    //     position: relative;
+    //     padding: 20px;
+    // }
+
+    &__img {
+        position: absolute;
+        top: -10%;
+        left: 5%;
+
+        @include v.tab600 {
+            top: -5%;
+            left: 10%;
+        }
+
+        @include v.sp {
+            top: -3%;
+            left: 5%;
+        }
+    }
+
+    &__hukuro {
+        position: absolute;
+        max-width: 7%;
+        top: 8%;
+        left: 28%;
+        z-index: 3;
+        animation: floating 1.5s ease-in-out infinite;
+
+        @keyframes floating {
+
+            0%,
+            100% {
+                transform: translateY(0);
+                /* 初期位置 */
+            }
+
+            50% {
+                transform: translateY(-20px);
+                /* 上に動く位置 */
+            }
+        }
+
+        @include v.tab600 {
+            max-width: 20%;
+            top: 1%;
+            left: 80%;
+        }
+
+        @include v.sp {
+            max-width: 20%;
+            top: 1%;
+            left: 80%;
+        }
+
+
+    }
+
+    &__kuma {
+        position: absolute;
+        max-width: 15%;
+        right: -13%;
+        bottom: -2%;
+        z-index: 3;
+        animation: rotateAndPause 3s linear infinite;
+        /* アニメーションのプロパティを指定 */
+        transform-origin: center center;
+        /* 回転の基準点を指定 */
+
+        /* 回転と停止のアニメーションを定義 */
+        @keyframes rotateAndPause {
+
+            0%,
+            50% {
+                transform: rotateY(0deg);
+                /* 初期位置 */
+            }
+
+            20% {
+                transform: rotateY(360deg);
+                /* 3回転（360 * 3） */
+            }
+        }
+
+        @include v.tab600 {
+            max-width: 50%;
+            top: 88%;
+            left: 5%;
+        }
+
+        @include v.sp {
+            max-width: 50%;
+            top: 88%;
+            left: 5%;
+        }
+    }
+}
+
+/*ギャラリーの特別サイズ指定*/
+@media screen and (max-width: 600px) {
+    .gallery__container {
+        height: 150vh;
+        max-width: 300px;
+        position: relative;
+        background-color: rgba(253, 207, 0, 0.8);
+        background-image: url(../images/piano-sp.png);
+        background-repeat: repeat-y;
+        background-size: 100%;
+        border-radius: 0 20px 20px 0;
+    }
+}
+
+/*access*/
+.access {
+    background-color: v.$base;
+    margin-bottom: 80px;
+}
+
+.access {
+    &__info {
+        justify-content: space-around;
+    }
+
+    &__info1 {
+        justify-content: space-between;
+        border-bottom: 2px dashed v.$accent;
+        margin-bottom: 20px;
+
+    }
+
+    &__info_item {
+        width: 47%;
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 20px;
+
+        @include v.tab {
+            width: 100%;
+            margin-bottom: 30px;
+
+        }
+
+        @include v.sp {
+            width: 100%;
+            margin-bottom: 30px;
+        }
+
+        h4 {
+            text-align: center;
+            color: v.$accent;
+            font-size: 26px;
+            padding: 20px 0;
+        }
+
+
+    }
+
+    &__info_box {
+
+        dt {
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        dd {
+            margin-bottom: 20px;
+        }
+
+        span {
+            font-size: 14px;
+        }
+    }
+
+    &__map {
+        width: 47%;
+        height: auto;
+
+        @include v.tab {
+            display: none;
+        }
+
+        @include v.sp {
+            width: 100%;
+            display: none;
+        }
+
+    }
+
+    &__onpu {
+
+        @include v.tab {
+            margin-bottom: 20px;
+        }
+
+        @include v.sp {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        img {
+            width: 205px;
+            height: 155px;
+            border-radius: 20px;
+        }
+    }
+}
+
+iframe {
+    border-radius: 20px;
+}
+
+.access__map-sp-container {
+    background-color: v.$base;
+}
+
+.access__map-sp {
+    display: none;
+
+    @include v.tab {
+        display: block;
+        width: 100%;
+        /* 幅を100%に設定 */
+        height: 250px;
+        /* 高さを固定値で設定 */
+        padding-bottom: 20px;
+        margin-bottom: 50px;
+    }
+
+
+    @include v.sp {
+        display: block;
+        width: 100%;
+        /* 幅を100%に設定 */
+        height: 250px;
+        /* 高さを固定値で設定 */
+        padding-bottom: 20px;
+        margin-bottom: 50px;
+    }
+
+}
+
+.dl-box dt {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.dl-box dd {
+    margin-bottom: 20px;
+    span {
+        font-size: 14px;
+    }
+}
+
+.tel-img::before {
+    content: "";
+    display: inline-block;
+    background-image: url(../images/tel.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    vertical-align: bottom;
+}
+
+.phone-img::before {
+    content: "";
+    display: inline-block;
+    background-image: url(../images/mobile.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    vertical-align: bottom;
+}
+
+/*ここだけマージンなし*/
+#mb-0 {
+    margin-bottom: 0;
+}
+
+.dl-box {
+    border-bottom: 2px dashed v.$accent;
+    margin-bottom: 20px;
+}

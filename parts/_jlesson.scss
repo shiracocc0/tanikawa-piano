@@ -1,0 +1,390 @@
+@charset 'utf-8';
+@use "variables"as v;
+
+.jlesson-view {
+    height: 90vh;
+    text-align: center;
+
+    @include v.tab {
+        height: 90vh;
+        justify-content: center;
+    }
+
+    // @include v.sp {
+    //     height: 90vh;
+    //     justify-content: center;
+    // }
+
+
+    &__box {
+        justify-content: center;
+        align-items: center;
+        gap: 0 100px;
+        margin: 0 auto;
+
+        @include v.gray {
+            gap: 0;
+        }
+
+        @include v.tab {
+            gap: 40px;
+        }
+
+        @include v.sp {
+            gap: 40px;
+        }
+    }
+
+    img {
+        width: 50%;
+        height: auto;
+
+        @include v.tab {
+            width: 60%;
+        }
+
+        @include v.sp {
+            width: 90%;
+        }
+    }
+
+}
+
+.page-Title {
+    @include v.sp {
+        text-align: center;
+        margin-bottom: 40px;
+        padding-right: 0;
+    }
+}
+
+.jlesson {
+    background-color: v.$main;
+    padding: 50px 0;
+
+    h3 {
+        font-size: 36px;
+        color: #fff;
+        margin-bottom: 50px;
+        text-align: center;
+    }
+
+    &__text {
+        width: 50%;
+
+        @include v.tab {
+            width: 100%;
+        }
+
+        @include v.sp {
+            width: 100%;
+        }
+
+    }
+
+    &__item {
+        background-color: #fff;
+        padding: 50px;
+        border-radius: 10px;
+        margin-bottom: 20px;
+        gap: 50px;
+
+        @include v.sp {
+            padding: 20px;
+        }
+
+        &__container {
+            position: relative;
+            width: 47%;
+
+            @include v.tab {
+                width: 100%;
+            }
+
+            @include v.sp {
+                width: 100%;
+            }
+        }
+
+        &__img {
+            width: 100%;
+            object-fit: cover;
+            border-radius: 20px;
+            height: 100%;
+
+            @include v.tab {
+                width: 100%;
+            }
+
+            @include v.sp {
+                width: 100%;
+            }
+        }
+
+        /*ねこ*/
+        &__reverse-neko {
+            height: 150px;
+            width: auto;
+            position: absolute;
+            top: 38%;
+            left: -10%;
+
+            animation: pikopiko 1s steps(2, start) infinite;
+
+            @keyframes pikopiko {
+                0% {
+                    transform: scale(-1, 1) rotate(20deg);
+                }
+
+                to {
+                    transform: scale(-1, 1) rotate(-10deg);
+                }
+            }
+
+            @include v.tab {
+                height: 120px;
+                top: 90%;
+            }
+
+            @include v.sp {
+                height: 100px;
+                top: 83%;
+            }
+        }
+
+        /*いぬ*/
+        &__pic {
+            height: 150px;
+            width: auto;
+            position: absolute;
+            right: -10%;
+            top: 40%;
+            animation: rotate-frames 3s steps(1) infinite;
+
+            @keyframes rotate-frames {
+
+                0%,
+                100% {
+                    transform: rotateY(0deg);
+                }
+
+                20%,
+                80% {
+                    transform: rotateY(180deg);
+                }
+
+                40%,
+                60% {
+                    transform: rotateY(360deg);
+                }
+            }
+
+            @include v.tab {
+                height: 120px;
+                top: 90%;
+            }
+
+            @include v.sp {
+                height: 100px;
+                top: 85%;
+            }
+        }
+
+        /*うさぎ*/
+        &__reverse-usagi {
+            height: 150px;
+            width: auto;
+            position: absolute;
+            left: -10%;
+            top: 40%;
+            animation: jump 1s infinite;
+
+            @keyframes jump {
+
+                0%,
+                100% {
+                    transform: scale(-1, 1) translateY(0);
+                }
+
+                50% {
+                    transform: scale(-1, 1) translateY(-20px);
+                }
+            }
+
+            @include v.tab {
+                height: 120px;
+                top: 88%;
+
+            }
+
+            @include v.sp {
+                height: 100px;
+                top: 85%;
+            }
+        }
+
+    }
+
+    /*小学生以上のお子様*/
+    .switch {
+        flex-direction: row-reverse;
+
+        @include v.tab {
+            flex-direction: column;
+        }
+
+        @include v.sp {
+            flex-direction: column;
+        }
+
+    }
+
+    &__title {
+        font-size: 36px;
+        color: v.$main;
+        padding: 15px 0;
+        text-align: center;
+        border-top: 3px dashed v.$main;
+        border-bottom: 3px dashed v.$main;
+    }
+
+    &__text {
+        p {
+            line-height: 2em;
+            color: v.$black;
+        }
+    }
+
+    &__p {
+        margin: 30px 0;
+    }
+}
+
+.price__button {
+    text-align: center;
+
+
+
+    & a {
+        border: 3px solid v.$accent;
+        background-color: #fff;
+        border-radius: 86px;
+        color: v.$accent;
+        width: 240px;
+
+        // @include v.sp {
+        //     width: 200px;
+        // }
+    }
+
+    & a:hover {
+        background-color: v.$accent;
+        color: #fff;
+        opacity: 1;
+    }
+
+
+}
+
+.priceatag {
+    display: inline-block;
+    border-radius: 86px;
+    color: v.$accent;
+    width: 240px;
+    height: auto;
+    padding: 20px;
+
+    @include v.sp {
+        width: 200px;
+    }
+
+}
+
+
+/*テーブル*/
+.price-container {
+    width: 70%;
+    margin: 0 auto;
+    padding: 50px 0;
+
+    @include v.sp {
+        width: 100%;
+    }
+
+}
+
+.j-price {
+    padding: 80px 0;
+
+    &__Title {
+        font-size: 36px;
+        color: v.$black;
+        border-bottom: 3px solid v.$main;
+        padding-bottom: 15px;
+        text-align: center;
+    }
+
+    &__caption {
+        caption-side: bottom;
+        color: v.$black;
+        font-size: 16px;
+        margin-top: 10px;
+    }
+
+    &__Table {
+
+        border-collapse: collapse;
+        width: 100%;
+
+        tr {
+            border-top: 1px solid v.$black;
+            border-bottom: 1px solid v.$black;
+        }
+
+        th,
+        td {
+            color: v.$black;
+            font-size: 24px;
+            font-weight: normal;
+            // line-height: 2;
+            width: 50%;
+            padding: 20px 0 20px 60px;
+            letter-spacing: 0.1em;
+
+            @include v.gray {
+                font-size: 20px;
+            }
+
+            @include v.tab {
+                font-size: 18px;
+                padding: 15px 0 15px 20px;
+            }
+
+
+            @include v.sp {
+                font-size: 14px;
+                padding: 15px 0 15px 10px;
+            }
+
+        }
+
+        th {
+            text-align-last: left;
+        }
+
+        &__orange {
+            background-color: v.$main50;
+        }
+    }
+
+    &__line {
+        img {
+            margin-bottom: 50px;
+        }
+    }
+}
+
+.j-lesson-line-img {
+    margin: 50px 0;
+    text-align: center;
+}

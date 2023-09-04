@@ -1,0 +1,253 @@
+@use "variables"as v;
+
+header {
+    align-items: center;
+    background-color: v.$accent;
+    color: #fff;
+    padding: 15px 6vh;
+    position: sticky;
+    z-index: 999;
+    top: 0;
+    // position: relative;
+
+    @include v.gray {
+        position: sticky;
+        /* ヘッダーを固定する */
+        top: 0;
+        /* 上部から配置の基準位置を決める */
+        left: 0;
+        /* 左から配置の基準位置を決める */
+        width: 100%;
+        /* ヘッダーの横幅を指定する */
+        padding: 15px 50px;
+    }
+
+    @include v.tab {
+        position: sticky;
+        /* ヘッダーを固定する */
+        top: 0;
+        /* 上部から配置の基準位置を決める */
+        left: 0;
+        /* 左から配置の基準位置を決める */
+        width: 100%;
+        /* ヘッダーの横幅を指定する */
+        padding: 15px 30px;
+    }
+
+    @include v.sp {
+        position: sticky;
+        /* ヘッダーを固定する */
+        top: 0;
+        /* 上部から配置の基準位置を決める */
+        left: 0;
+        /* 左から配置の基準位置を決める */
+        width: 100%;
+        /* ヘッダーの横幅を指定する */
+        padding: 10px 20px;
+    }
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-container {
+    display: flex;
+    // justify-content: center;
+    align-items: center;
+    gap: 30px;
+    // width: 100%;
+    height: 60px;
+
+    @include v.tab {
+        width: 100%;
+        // position: relative;
+        height: 50px;
+    }
+
+    @include v.sp {
+        gap: 15px;
+    }
+
+    a {
+        // display: flex;
+        color: #fff;
+        align-items: center;
+
+        @include v.tab {
+            // position: absolute;
+            left: 0;
+        }
+    }
+
+    &__h1 {
+        font-size: 32px;
+        padding: 5px;
+        vertical-align: bottom;
+        // color: #fff;
+
+        @media screen and (max-width: (1199px)) {
+            font-size: 30px;
+            // grayゾーンのところで文字を真ん中に寄せる
+            position: absolute;
+            top: 0;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            -webkit-transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+        }
+
+        @include v.tab {
+            font-size: 26px;
+        }
+
+        @include v.sp {
+            font-size: 5vw;
+        }
+    }
+}
+
+.logo {
+    max-height: 66px;
+
+    @include v.tab {
+        max-height: 60px;
+    }
+
+    @include v.sp {
+        min-height: 35px;
+        max-height: 50px;
+    }
+}
+
+
+
+.nav {
+    &__item {
+        color: #fff;
+        font-size: 21px;
+        font-weight: bold;
+        padding-left: 20px;
+
+        a {
+            color: #fff;
+            // padding: 5px 20px;
+        }
+    }
+
+    // spだった
+    @include v.sp {
+        text-align: center;
+    }
+}
+
+@include v.gray {
+    .openbtn {
+        display: none;
+    }
+}
+
+// nav tab～用
+@media screen and (max-width: (1199px)) {
+
+    /*========= ナビゲーションのためのCSS ===============*/
+
+    #g-nav {
+        /*position:fixed;にし、z-indexの数値を小さくして最背面へ*/
+        position: fixed;
+        z-index: -1;
+        opacity: 0;
+        /*はじめは透過0*/
+        /*ナビの位置と形状*/
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        /*ナビの高さ*/
+        background: v.$accent;
+        /*動き*/
+        transition: all 0.3s;
+        display: none;
+    }
+
+    /*アクティブクラスがついたら透過なしにして最前面へ*/
+    #g-nav.panelactive {
+        opacity: 1;
+        display: block;
+        z-index: 999;
+    }
+
+    /*ナビゲーション*/
+    #g-nav ul {
+        display: none;
+        position: absolute;
+        z-index: 999;
+        top: 70px;
+    }
+
+    #g-nav.panelactive ul {
+        display: block;
+        width: 100%;
+    }
+
+    /*リストのレイアウト設定*/
+
+    #g-nav li {
+        list-style: none;
+        text-align: center;
+        border-top: 1px solid v.$base;
+        padding: 3.3vh 0;
+    }
+
+    #g-nav li:last-child {
+        border-bottom: 1px solid v.$base;
+    }
+
+    #g-nav li a {
+        color: #fff;
+        padding: 10px;
+        display: block;
+        text-transform: uppercase;
+        letter-spacing: 0.12em;
+    }
+
+    /*========= ボタンのためのCSS ===============*/
+    .openbtn {
+        width: 50px;
+        height: 50px;
+        padding: 15px 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        z-index: 9999;
+        cursor: pointer;
+        align-items: center;
+    }
+
+    /*×に変化*/
+    .openbtn span {
+        display: block;
+        transition: all .4s;
+        height: 2px;
+        border-radius: 2px;
+        background-color: #fff;
+        width: 100%;
+    }
+
+    .openbtn.active span:nth-of-type(1) {
+        transform: translateY(9px) rotate(-45deg);
+        width: 70%;
+    }
+
+    .openbtn.active span:nth-of-type(2) {
+        opacity: 0;
+    }
+
+    .openbtn.active span:nth-of-type(3) {
+        transform: translateY(-9px) rotate(45deg);
+        width: 70%;
+    }
+}

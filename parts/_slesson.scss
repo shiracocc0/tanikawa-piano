@@ -1,0 +1,258 @@
+@charset 'utf-8';
+@use "variables"as v;
+
+.slesson-view {
+    height: 90vh;
+    text-align: center;
+
+    // @include v.sp {
+    //     height: 90vh;
+    //     justify-content: center;
+    // }
+
+    @include v.tab {
+        height: 90vh;
+        justify-content: center;
+    }
+
+    &__box {
+        justify-content: center;
+        align-items: center;
+        gap: 0 100px;
+        margin: 0 auto;
+
+        @include v.gray {
+            gap: 0 50px;
+        }
+
+        img {
+            width: 50%;
+            height: auto;
+
+            @include v.tab {
+                width: 60%;
+            }
+    
+            @include v.sp {
+                width: 90%;
+            }
+        }
+    }
+}
+
+.page-Title {
+    @include v.sp {
+        margin-bottom: 30px;
+    }
+
+    & br {
+
+        @include v.tab {
+            display: none;
+        }
+
+        @include v.tab600 {
+            display: block;
+        }
+
+    }
+
+}
+
+.slesson {
+    background-color: v.$accent;
+    padding: 50px 0;
+
+    h3 {
+        font-size: 36px;
+        color: #fff;
+        margin-bottom: 50px;
+        text-align: center;
+    }
+
+    &__item {
+        background-color: #fff;
+        padding: 50px;
+        border-radius: 10px;
+        margin-bottom: 20px;
+        gap: 50px;
+        justify-content: space-between;
+
+        @include v.sp {
+            padding: 20px;
+        }
+
+        &__container {
+            margin-top: 20px;
+            position: relative;
+            width: 47%;
+
+            @include v.tab {
+                width: 100%;
+            }
+
+            @include v.sp {
+                width: 100%;
+            }
+        }
+
+        &__img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 20px;
+
+            @include v.sp {
+                width: 100%;
+            }
+        }
+
+
+        &__pic {
+            height: auto;
+            width: 170px;
+            position: absolute;
+            right: 65%;
+            bottom: 0%;
+            // transform: rotateY(180deg);
+
+            @include v.tab {
+                width: 150px;
+                right: 78%;
+                }
+
+            @include v.sp {
+                width: 100px;
+                right: 75%;
+            }
+
+            animation: swing2 linear 2.5s infinite;
+
+            @keyframes swing2 {
+                0% {
+                    transform: rotate(0deg);
+                }
+
+                25% {
+                    transform: rotate(10deg);
+                }
+
+                50% {
+                    transform: rotate(0deg);
+                }
+
+                75% {
+                    transform: rotate(-10deg);
+                }
+
+                100% {
+                    transform: rotate(0deg);
+                }
+            }
+        }
+    }
+
+    &__p {
+        margin: 20px 0;
+        width: 47%;
+
+        @include v.tab {
+            width: 100%;
+        }
+
+        p {
+            margin-bottom: 10px;
+        }
+    }
+}
+
+/*テーブル*/
+.price-container {
+    width: 70%;
+    margin: 0 auto;
+    padding-top: 50px;
+
+    @include v.sp {
+        width: 100%;
+    }
+}
+
+.s-price {
+    padding: 80px 0;
+
+    &__Title {
+        font-size: 36px;
+        color: v.$black;
+        border-bottom: 3px solid v.$main;
+        padding-bottom: 15px;
+        text-align: center;
+    }
+
+    &__caption {
+        caption-side: bottom;
+        color: v.$black;
+        font-size: 16px;
+        margin-top: 10px;
+    }
+
+    &__Table {
+        border-collapse: collapse;
+        width: 100%;
+
+        tr {
+            border-top: 1px solid v.$black;
+            border-bottom: 1px solid v.$black;
+        }
+
+        th,
+        td {
+            color: v.$black;
+            font-size: 24px;
+            font-weight: normal;
+            width: 50%;
+            padding: 20px 0 20px 60px;
+            letter-spacing: 0.1em;
+
+            @include v.gray {
+                font-size: 20px;
+            }
+
+            @include v.tab {
+                font-size: 18px;
+                padding: 15px 0 15px 20px;
+            }
+
+            @include v.sp {
+                font-size: 14px;
+                padding: 15px 0 15px 10px;
+            }
+        }
+
+        th {
+            text-align-last: left;
+        }
+
+        &__orange {
+            background-color: v.$main50;
+        }
+    }
+
+    &__line {
+        img {
+            margin-bottom: 50px;
+        }
+    }
+}
+
+.small {
+    font-size: 14px;
+
+    @include v.sp {
+        font-size: 12px;
+    }
+}
+
+.s-lesson-line-img {
+    margin: 50px 0;
+    text-align: center;
+}
